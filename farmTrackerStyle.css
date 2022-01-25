@@ -28,7 +28,7 @@ body {
 .page--container .content--container .your_assets--container {
   grid-row: 1/-1;
   grid-column: 1/2;
-  background-color: #6bffba;
+  background-color: #67ffb8;
 }
 .page--container .content--container .market--header {
   grid-row: 1/2;
