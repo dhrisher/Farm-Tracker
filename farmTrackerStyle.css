@@ -10,8 +10,10 @@ body {
   height: calc(100vh - 40px);
   min-height: 800px;
   min-width: 780px;
+  max-width: 1420px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 .page--container .content--container {
   height: 90%;
@@ -29,6 +31,48 @@ body {
   grid-row: 1/-1;
   grid-column: 1/2;
   background-color: #67ffb8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page--container .content--container .your_assets--container .your_assets_title {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.page--container .content--container .your_assets--container .asset_item {
+  color: white;
+  background-color: #006636;
+  width: 90%;
+  height: 10%;
+  border-radius: 40px;
+  margin: 10px;
+  display: flex;
+}
+.page--container .content--container .your_assets--container .asset_item .asset_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page--container .content--container .your_assets--container .asset_item .icon {
+  height: 100%;
+  width: 20%;
+}
+.page--container .content--container .your_assets--container .asset_item .icon img {
+  height: 55px;
+  width: 55px;
+  border-radius: 100px;
+}
+.page--container .content--container .your_assets--container .asset_item .value {
+  height: 100%;
+  width: 50%;
+}
+.page--container .content--container .your_assets--container .asset_item .value_change {
+  height: 100%;
+  width: 30%;
 }
 .page--container .content--container .market--header {
   grid-row: 1/2;
@@ -37,8 +81,8 @@ body {
 }
 .page--container .content--container .market_item--container {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   padding: 5px;
   grid-auto-rows: 1fr;
 }
@@ -49,6 +93,9 @@ body {
   justify-self: center;
   border-radius: 20px;
   background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
 }
 .page--container nav {
   width: 100%;
