@@ -79,6 +79,7 @@ body {
   width: 55px;
   height: 55px;
   border-radius: 100px;
+  box-shadow: 0px 2px 10px #494949;
 }
 .page--container .content--container .your_assets--container .asset_item .value {
   height: 100%;
@@ -120,6 +121,24 @@ body {
   box-shadow: 0px 5px 10px green;
   display: flex;
   flex-direction: column;
+}
+.page--container .content--container .market_item--container .market_item.wave {
+  display: none;
+}
+@media only screen and (min-width: 825px) {
+  .page--container .content--container .market_item--container .market_item.wave.wave1 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1090px) {
+  .page--container .content--container .market_item--container .market_item.wave.wave2 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .page--container .content--container .market_item--container .market_item.wave.wave3 {
+    display: block;
+  }
 }
 .page--container nav {
   width: 100%;
