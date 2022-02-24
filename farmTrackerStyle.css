@@ -121,11 +121,62 @@ body {
   box-shadow: 0px 5px 10px green;
   display: flex;
   flex-direction: column;
+  -webkit-animation: blur_reveal 1s linear;
+          animation: blur_reveal 1s linear;
+  transition: box-shadow 400ms;
+}
+.page--container .content--container .market_item--container .market_item:hover {
+  background-color: #fafafa;
+  box-shadow: 0px 1px 10px #004d00;
+}
+.page--container .content--container .market_item--container .market_item .inner_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page--container .content--container .market_item--container .market_item_header {
+  height: 20%;
+  background-color: #016650;
+  border-radius: 15px 15px 0px 0px;
+  color: white;
+}
+.page--container .content--container .market_item--container .market_item_image {
+  height: 40%;
+}
+.page--container .content--container .market_item--container .market_item_image img {
+  height: 50px;
+}
+.page--container .content--container .market_item--container .market_item_unit_value {
+  height: 10%;
+}
+.page--container .content--container .market_item--container .market_item_buy {
+  height: 30%;
+  position: relative;
+}
+.page--container .content--container .market_item--container .market_item_buy .buy-btn {
+  padding: 5px 15px;
+  margin: 3px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 10px grey;
+  cursor: pointer;
+  transition: box-shadow 400ms, color 400ms;
+}
+.page--container .content--container .market_item--container .market_item_buy .buy-btn:hover {
+  color: yellow;
+  box-shadow: 0px 1px 5px grey;
 }
 .page--container .content--container .market_item--container .market_item.wave {
   display: none;
 }
-@media only screen and (min-width: 825px) {
+@media only screen and (min-width: 0px) {
   .page--container .content--container .market_item--container .market_item.wave.wave1 {
     display: block;
   }
@@ -145,4 +196,37 @@ body {
   height: 10%;
   background-color: #38ffde;
   margin-bottom: 10px;
+  position: relative;
+  padding: 3px;
+}
+.page--container nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.page--container nav ul li {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 15px;
+  margin: 6px;
+  border-radius: 5px;
+}
+.page--container nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+@-webkit-keyframes blur_reveal {
+  0% {
+    filter: blur(5px);
+  }
+}
+
+@keyframes blur_reveal {
+  0% {
+    filter: blur(5px);
+  }
 }/*# sourceMappingURL=farmTrackerStyle.css.map */

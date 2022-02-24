@@ -23,6 +23,8 @@ body {
 
     margin: 0 auto;
 
+    
+
 
     .content--container {
 
@@ -162,11 +164,71 @@ body {
                 display: flex;
                 flex-direction: column;
 
+                animation: blur_reveal 1s linear;
+                transition: box-shadow 400ms;
+
+                &:hover{
+                    background-color: darken(white, 2%);
+                    box-shadow: 0px 1px 10px darken(green, 10%);
+                }
+
+                .inner_item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &_header{
+                    height: 20%;
+                    background-color: rgb(1, 102, 80);
+                    border-radius: 15px 15px 0px 0px;
+                    color: white;
+                }
+
+                &_image{
+                    height: 40%;
+                    img{
+                        height: 50px;
+                    }
+                }
+
+                &_unit_value{
+                    height: 10%;
+                }
+
+                &_buy{
+                    height: 30%;
+                        position: relative;
+
+                    .buy-btn{
+                        padding: 5px 15px;
+                        margin: 3px;
+                        border-radius: 5px;
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        box-shadow: 0px 5px 10px grey;
+                        cursor: pointer;
+
+                        transition: box-shadow 400ms, color 400ms;
+
+                        &:hover{
+                            color: yellow;
+                            box-shadow: 0px 1px 5px grey;
+                        }
+                    }
+                }
+
                 &.wave {
                     display: none;
 
                     &.wave1 {
-                        @media only screen and (min-width: 825px) {
+                        @media only screen and (min-width: 0px) {
                             display: block;
                         }  
                     }
@@ -195,10 +257,43 @@ body {
         height: 10%;
         background-color: rgb(56, 255, 222);
         margin-bottom: 10px;
+        position: relative;
+        padding: 3px;
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(-0%, -50%);
+                
+            li{
+                display: inline-block;
+                background-color: white;
+                padding: 10px 15px;
+                margin: 6px;
+                border-radius: 5px;
+
+                #title{
+                    
+                }
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        
     }
 }
 
 
+//-------------------animations------------------------------
 
+@keyframes blur_reveal {
+    0%  {filter: blur(5px);}
+  }
 
 
